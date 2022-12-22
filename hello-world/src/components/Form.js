@@ -9,6 +9,7 @@ export default class Form extends Component {
       topic: "react",
     };
   }
+
   usernameChangeHandler = ({ target: { value } }) => {
     this.setState({ username: value });
   };
