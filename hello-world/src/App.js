@@ -1,9 +1,9 @@
 import "./App.css";
-import Lifecycle from "./components/Lifecycle.js";
+import PureComponentDemo from "./components/PureComponentDemo.js";
 function App() {
   return (
     <div className="App">
-      <Lifecycle />
+      <PureComponentDemo />
     </div>
   );
 }
