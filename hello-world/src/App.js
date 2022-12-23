@@ -1,11 +1,7 @@
 import "./App.css";
-import PureComponentDemo from "./components/PureComponentDemo.js";
+// import ParentMemo from "./components/ParentMemo.js";
 function App() {
-  return (
-    <div className="App">
-      <PureComponentDemo />
-    </div>
-  );
+  return <div className="App">{/* <ParentMemo /> */}</div>;
 }
 
 export default App;

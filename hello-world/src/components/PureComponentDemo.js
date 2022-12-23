@@ -10,7 +10,7 @@ export default class PureComponentDemo extends PureComponent {
   componentDidMount() {
     console.log("Component mounted");
     setInterval(() => {
-      this.setState({ name: "Kumar" });
+      this.setState({ name: "kumar" });
     }, 2000);
   }
   render() {
