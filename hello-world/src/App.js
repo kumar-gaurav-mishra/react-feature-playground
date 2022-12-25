@@ -1,7 +1,8 @@
 import "./App.css";
-import FRRefParent from "./components/FRRefParent.js";
+import "./components/styles.css";
+import PortalsDemo from "./components/PortalsDemo";
 function App() {
-  return <div className="App">{<FRRefParent />}</div>;
+  return <div className="App primary">{<PortalsDemo />}</div>;
 }
 
 export default App;
