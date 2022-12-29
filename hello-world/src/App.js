@@ -1,26 +1,13 @@
 import "./App.css";
-import RenderPropsCounter from "./components/RenderPropsCounter";
-import ClickCounterWithRenderProps from "./components/ClickCounterWithRenderProps";
-import HoverCounterWithRenderProps from "./components/HoverCounterWithRenderProps";
+import ComponentC from "./components/ComponentC";
+import { UserProvider } from "./components/userContext";
+
 function App() {
   return (
     <div className="App">
-      <RenderPropsCounter
-        render={(count, countHandler) => (
-          <ClickCounterWithRenderProps
-            count={count}
-            countHandler={countHandler}
-          />
-        )}
-      />
-      <RenderPropsCounter
-        render={(count, countHandler) => (
-          <HoverCounterWithRenderProps
-            count={count}
-            countHandler={countHandler}
-          />
-        )}
-      />
+      <UserProvider value="Kumar">
+        <ComponentC />
+      </UserProvider>
     </div>
   );
 }
