@@ -12,11 +12,16 @@ const Game = () => {
         const squares = current.squares.slice();
         if (calculateWinner(squares) || squares[i]) return;
         squares[i] = xIsNext ? 'X' : 'O';
-        setHistory(...history, { squares });
+        setHistory(history.concat([
+        {
+          squares: squares
+        }
+      ]));
         setXIsNext(!xIsNext);
         setStepNumber(history.length);
     }
     const jumpTo = (step) => {
+        if (step === 0) setHistory([{ squares: Array(9).fill(null) }]);
         setStepNumber(step);
         setXIsNext((step % 2) === 0);
     }
@@ -40,7 +45,7 @@ const Game = () => {
         }
         return null;
     }
-    const winner = calculateWinner(history[history.length - 1].squares);
+    const winner = calculateWinner(history[stepNumber].squares);
     if (winner) {
         status = "Winner is " + winner;
     } else {
